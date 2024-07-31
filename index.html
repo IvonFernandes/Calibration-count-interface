@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>CALIBRATION ENTRY</title>
+
+    <!-- Basic inline styling -->
+  </head>
+  <style>
+    label {
+      padding: 6px;
+    }
+
+    form {
+      background: url(bckg.jpg);
+      background-repeat: no-repeat;
+      background-size: 67% 80%;
+      background-color: rgba(
+        255,
+        255,
+        255,
+        0.8
+      ); /* Semi-transparent white background for readability */
+    }
+    img {
+      width: 20%;
+      height: 200px;
+      border: 5px solid black;
+    }
+    .submit-btn {
+      background-color: #04aa6d; /* Green */
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    #succ {
+      color: black;
+      font-size: 100%;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      margin-left: 473px;
+    }
+    #message {
+      color: black;
+
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      margin-left: 444px;
+      background-color: green;
+      color: white;
+      text-align: center;
+      display: inline;
+      font-size: 20px;
+      padding: 15px 200px;
+    }
+  </style>
+  <script>
+    function check() {
+      var val_1 = document.getElementById("s22");
+      var val_2 = document.getElementById("s11");
+      const msg = document.getElementById("message");
+      if (
+        val_1.value <= -36 &&
+        val_1.value >= -72 &&
+        val_2.value <= -36 &&
+        val_2.value >= -72
+      ) {
+        msg.setAttribute("style", "background-color:green;");
+        msg.innerHTML = "CALIBRATION PASSED";
+      } else {
+        msg.setAttribute("style", "background-color:red;");
+        msg.innerHTML = "CALIBRATION FAILED";
+      }
+    }
+  </script>
+
+  <body>
+    <br />
+    <fieldset style="margin-top: -25px">
+      <legend>Details</legend>
+
+      <form
+        style="outline: -webkit-focus-ring-color auto 1px"
+        action="https://sheetdb.io/api/v1/arwz90e8vssrd"
+        method="post"
+        id="sheetdb-form"
+        name="submit-to-google-sheet"
+      >
+        <br /><br />
+        <label for="dob" style="margin-left: 4px">DATE: </label>
+        <input
+          type="date"
+          id="dob"
+          name="data[dob]"
+          style="height: 25px; width: 90px"
+          required
+        />
+
+        <label for="shift">SHIFT:</label>
+
+        <select
+          name="data[shift]"
+          id="adpt_1"
+          style="height: 30px; width: 103px"
+        >
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+        </select>
+
+        <label for="dob" style="margin-left: 33px">OPERATOR: </label>
+        <input
+          type="text"
+          id="dob"
+          name="data[Operator]"
+          style="height: 24px; width: 170px"
+          required
+        />
+
+        <label for="team_leader" style="margin-left: 54px">TEAM LEADER:</label>
+        <select name="data[tm]" id="adpt_1" style="height: 30px; width: 175px">
+          <option
+            value="Jateen K
+          "
+          >
+            Jateen K
+          </option>
+          <option
+            value="Rohit G
+          "
+          >
+            Rohit G
+          </option>
+          <option
+            value="Prasad M
+          "
+          >
+            Prasad M
+          </option>
+
+          <option
+            value="Rajesh Y
+
+        "
+          >
+            Rajesh Y
+          </option>
+
+          <option
+            value="Amesh N
+
+      "
+          >
+            Amesh N
+          </option>
+          <option
+            value="Ivon F
+
+      "
+          >
+            Ivon F
+          </option>
+
+          <option
+            value="Rehan S
+
+
+      "
+          >
+            Rehan S
+          </option>
+          <option
+            value="Anup B
+
+
+      "
+          >
+            Anup B
+          </option>
+
+          <option
+            value="Ramnath V
+
+      "
+          >
+            Ramnath V
+          </option>
+
+          <option
+            value="Preetam 
+
+    "
+          >
+            Ramnath
+          </option>
+
+          <option
+            value=" Alok P
+
+    "
+          >
+            Alok P
+          </option>
+
+          <option
+            value=" Others
+
+  "
+          >
+            Others
+          </option>
+        </select>
+
+        <br /><br />
+
+        <label for="part_number">PART NUMBER:</label>
+        <select
+          name="data[Part number]"
+          id="part_number"
+          style="
+            height: 30px;
+            width: 200px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+          "
+          class="dropdown-menu"
+        >
+          <option value="TF-4-15-19">TF-4-15-19</option>
+          <option value="TF-4-13W-19">TF-4-13W-19</option>
+          <option value="TF-4-11W-19">TF-4-11W-19</option>
+          <option value="TF-4-7W-19">TF-4-7W-19</option>
+          <option value="TF-4-6W-19">TF-4-6W-19</option>
+          <option value="TF-4-4-19">TF-4-4-19</option>
+          <option value="TF-6-15-DET">TF-6-15-DET</option>
+          <option value="TF-6-13W-DET">TF-6-13W-DET</option>
+          <option value="TF-6-11W-DET">TF-6-11W-DET</option>
+          <option value="TF-6-7W-DET">TF-6-7W-DET</option>
+          <option value="TF-6-6W-DET">TF-6-6W-DET</option>
+          <option value="TF-6-4-DET">TF-6-4-DET</option>
+          <option value="TF-6-3-DET">TF-6-3-DET</option>
+          <option value="TF-8-15-17-HX">TF-8-15-17-HX</option>
+          <option value="TF-8-13W-17-HX">TF-8-13W-17-HX</option>
+          <option value="TF-8-11W-17-HX">TF-8-11W-17-HX</option>
+          <option value="TF-8-7W-17-HX">TF-8-7W-17-HX</option>
+          <option value="TF-8-6W-17-HX">TF-8-6W-17-HX</option>
+          <option value="TF-8-4-17-HX">TF-8-4-17-HX</option>
+          <option value="TF-8-15-17-USX">TF-8-15-17-USX</option>
+          <option value="TF-8-13W-17-USX">TF-8-13W-17-USX</option>
+          <option value="TF-8-11W-17-USX">TF-8-11W-17-USX</option>
+          <option value="TF-8-7W-17-USX">TF-8-7W-17-USX</option>
+          <option value="TF-8-6W-17-USX">TF-8-6W-17-USX</option>
+          <option value="TF-8-4-17-USX">TF-8-4-17-USX</option>
+          <option value="TF-8-3-17-USX">TF-8-3-17-USX</option>
+          <option value="TF-10-13W-18-HX">TF-10-13W-18-HX</option>
+          <option value="TF-10-11W-18-HX">TF-10-11W-18-HX</option>
+          <option value="TF-10-7W-18-HX">TF-10-7W-18-HX</option>
+          <option value="TF-10-6W-18-HX">TF-10-6W-18-HX</option>
+          <option value="TF-10-4-18-HX">TF-10-4-18-HX</option>
+          <option value="TF-10-13W-18-USX">TF-10-13W-18-USX</option>
+          <option value="TF-10-11W-18-USX">TF-10-11W-18-USX</option>
+          <option value="TF-10-7W-18-USX">TF-10-7W-18-USX</option>
+          <option value="TF-10-6W-18-USX">TF-10-6W-18-USX</option>
+          <option value="TF-10-4-18-USX">TF-10-4-18-USX</option>
+          <option value="TF-10-3-18-USX">TF-10-3-18-USX</option>
+          <option value="TF-12-7W-18-HX">TF-12-7W-18-HX</option>
+          <option value="TF-12-6W-18-HX">TF-12-6W-18-HX</option>
+          <option value="TF-12-4-18-HX">TF-12-4-18-HX</option>
+          <option value="TF-12-11W-18-USX">TF-12-11W-18-USX</option>
+          <option value="TF-6-6W-17">TF-6-6W-17</option>
+          <option value="TF-12-7W-18-USX">TF-12-7W-18-USX</option>
+          <option value="TF-12-6W-18-USX">TF-12-6W-18-USX</option>
+          <option value="TF-12-4-18-USX">TF-12-4-18-USX</option>
+          <option value="TF-12-3-18-USX">TF-12-3-18-USX</option>
+          <option value="TF-6-7W-17-USX">TF-6-7W-17-USX</option>
+          <option value="TF-6-11W-17-USX">TF-6-11W-17-USX</option>
+          <option value="TF-6-15-17-USX">TF-6-15-17-USX</option>
+          <option value="TF-6-7W-17">TF-6-7W-17</option>
+          <option value="TF-6-6W-17-USX">TF-6-6W-17-USX</option>
+          <option value="VF-1-13-14">VF-1-13-14</option>
+          <option value="VF-1-15-14">VF-1-15-14</option>
+          <option value="VF-1-23-14">VF-1-23-14</option>
+          <option value="VF-1-26-14">VF-1-26-14</option>
+          <option value="VF-1-32-14">VF-1-32-14</option>
+          <option value="VF-1-38-14">VF-1-38-14</option>
+          <option value="VF-1-42-14">VF-1-42-14</option>
+          <option value="VF-1-28-14">VF-1-28-14</option>
+          <option value="Vf-1-18-14">Vf-1-18-14</option>
+          <option value="SF-1-23-15">SF-1-23-15</option>
+          <option value="SF-1-26-15">SF-1-26-15</option>
+          <option value="SF-1-28-15">SF-1-28-15</option>
+          <option value="SF-1-32-15">SF-1-32-15</option>
+          <option value="SF-1-38-15">SF-1-38-15</option>
+          <option value="SF-1-42-15">SF-1-42-15</option>
+          <option value="VF-2-7W-21">VF-2-7W-21</option>
+          <option value="VF-2-11W-21">VF-2-11W-21</option>
+          <option value="VF-2-13-21">VF-2-13-21</option>
+          <option value="VF-2-15-21">VF-2-15-21</option>
+          <option value="VF-2-18-21">VF-2-18-21</option>
+          <option value="VF-2-23-21">VF-2-23-21</option>
+          <option value="VF-2-26-21">VF-2-26-21</option>
+          <option value="VF-2-28-21">VF-2-28-21</option>
+          <option value="VF-2-32-21">VF-2-32-21</option>
+          <option value="VF-2-38-21">VF-2-38-21</option>
+          <option value="VF-2-42-21">VF-2-42-21</option>
+          <option value="SF-2-28-15">SF-2-28-15</option>
+          <option value="SF-2-13-15">SF-2-13-15</option>
+          <option value="SF-2-23-15">SF-2-23-15</option>
+          <option value="SF-2-26-15">SF-2-26-15</option>
+          <option value="SF-2-32-15">SF-2-32-15</option>
+          <option value="SF-2-38-15">SF-2-38-15</option>
+          <option value="SF-2-42-15">SF-2-42-15</option>
+          <option value="SF-2-15-15">SF-2-15-15</option>
+          <option value="SF-2-18-15">SF-2-18-15</option>
+          <option value="VF-3-28-14">VF-3-28-14</option>
+          <option value="VF-3-23-14">VF-3-23-14</option>
+          <option value="VF-3-7W-14">VF-3-7W-14</option>
+          <option value="VF-3-6W-14">VF-3-6W-14</option>
+          <option value="VF-3-11W-14">VF-3-11W-14</option>
+          <option value="VF-3-13-14">VF-3-13-14</option>
+          <option value="VF-3-15-14">VF-3-15-14</option>
+          <option value="VF-3-26-14">VF-3-26-14</option>
+          <option value="VF-3-32-14">VF-3-32-14</option>
+          <option value="VF-3-38-14">VF-3-38-14</option>
+          <option value="Vf-3-18-14">Vf-3-18-14</option>
+          <option value="C4F-3-13-20">C4F-3-13-20</option>
+          <option value="C4F-3-15-20">C4F-3-15-20</option>
+          <option value="C4F-3-6W-20">C4F-3-6W-20</option>
+          <option value="C4F-3-11W-20">C4F-3-11W-20</option>
+          <option value="C4F-3-23-20">C4F-3-23-20</option>
+          <option value="C4F-3-26-20">C4F-3-26-20</option>
+          <option value="C4f-3-18-20">C4f-3-18-20</option>
+          <option value="VFEEDA-4-6W">VFEEDA-4-6W</option>
+          <option value="VFEEDA-4-7W">VFEEDA-4-7W</option>
+          <option value="VFEEDA-4-11WF">VFEEDA-4-11WF</option>
+          <option value="VFEEDA-4-13">VFEEDA-4-13</option>
+          <option value="VFEEDA-4-15">VFEEDA-4-15</option>
+          <option value="VFEEDA-4-18">VFEEDA-4-18</option>
+          <option value="VFEEDA-4-23">VFEEDA-4-23</option>
+          <option value="VFEEDA-4-26">VFEEDA-4-26</option>
+          <option value="VF-6-6W-16">VF-6-6W-16</option>
+          <option value="VF-6-7W-16">VF-6-7W-16</option>
+          <option value="VF-6-11W-16">VF-6-11W-16</option>
+          <option value="VF-6-13-16">VF-6-13-16</option>
+          <option value="VF-6-15-16">VF-6-15-16</option>
+          <option value="VF-6-18-16">VF-6-18-16</option>
+          <option value="VF-6-23-16">VF-6-23-16</option>
+          <option value="VF-2-80-21">VF-2-80-21</option>
+          <option value="VF-1-80-16">VF-1-80-16</option>
+        </select>
+
+        <label for="ord" style="margin-left: 33px">ORDER NO: </label>
+        <input
+          type="number"
+          id="ord"
+          name="data[Order No]"
+          min="100000000"
+          style="
+            height: 25px;
+            width: 171px;
+            cursor: text;
+            z-index: 1;
+            position: relative;
+          "
+          required=""
+        />
+
+        <label for="ord" style="margin-left: 74px">ORDER QTY: </label>
+        <input
+          type="number"
+          id="ord"
+          name="data[Order qty]"
+          min="-40"
+          style="
+            height: 25px;
+            width: 171px;
+            cursor: text;
+            z-index: 1;
+            position: relative;
+          "
+          required=""
+        />
+
+        <br /><br />
+        <label
+          for="adapter_1"
+          style="height: 25px; width: 90px; margin-left: 25px"
+          >ADAPTER 1:</label
+        >
+        <select
+          name="data[Adapter 1]"
+          id="adpt_1"
+          style="height: 30px; width: 100px"
+        >
+          <option value="WR-137">WR-137</option>
+          <option value="WR-112">WR-112</option>
+          <option value="WR-90">WR-90</option>
+          <option value="WR-75">WR-75</option>
+          <option value="WR-62">WR-62</option>
+          <option value="WR-42">WR-42</option>
+          <option value="WR-34">WR-34</option>
+          <option value="WR-28">WR-28</option>
+          <option value="WR-19">WR-19</option>
+          <option value="WR-229">WR-229</option>
+          <option value="WR-187">WR-187</option>
+        </select>
+
+        <label
+          for="adapter_2"
+          style="height: 25px; width: 90px; margin-left: 118px"
+          >ADAPTER P2:</label
+        >
+        <select
+          name="data[Adapter 2]"
+          id="adpt_2"
+          style="height: 30px; width: 100px; margin-left: 6pxpx"
+        >
+          <option value="WR-137">WR-137</option>
+          <option value="WR-112">WR-112</option>
+          <option value="WR-90">WR-90</option>
+          <option value="WR-75">WR-75</option>
+          <option value="WR-62">WR-62</option>
+          <option value="WR-42">WR-42</option>
+          <option value="WR-34">WR-34</option>
+          <option value="WR-28">WR-28</option>
+          <option value="WR-19">WR-19</option>
+          <option value="WR-229">WR-229</option>
+          <option value="WR-187">WR-187</option>
+        </select>
+
+        <label
+          for="cable p1"
+          style="height: 25px; width: 90px; margin-left: 145px"
+          >RF CABLE P1:
+        </label>
+        <select
+          name="data[cable P1]"
+          id="cable 1"
+          style="height: 30px; width: 100px"
+        >
+          <option value="FD-EQ-C1">FD-EQ-C1</option>
+          <option value="FD-EQ-C2">FD-EQ-C2</option>
+          <option value="FD-EQ-C3">FD-EQ-C3</option>
+          <option value="FD-EQ-C4">FD-EQ-C4</option>
+          <option value="FD-EQ-C5">FD-EQ-C5</option>
+          <option value="FD-EQ-C6">FD-EQ-C6</option>
+          <option value="FD-EQ-C7">FD-EQ-C7</option>
+          <option value="FD-EQ-C8">FD-EQ-C8</option>
+          <option value="FD-EQ-C9">FD-EQ-C9</option>
+          <option value="FD-EQ-C10">FD-EQ-C10</option>
+        </select>
+
+        <label
+          for="cable p2"
+          style="height: 25px; width: 90px; margin-left: 77px"
+          >RF CABLE P2:</label
+        >
+        <select
+          name="data[cable P2]"
+          id="cable 2"
+          style="height: 30px; width: 196px"
+        >
+          <option value="FD-EQ-C1">FD-EQ-C1</option>
+          <option value="FD-EQ-C2">FD-EQ-C2</option>
+          <option value="FD-EQ-C3">FD-EQ-C3</option>
+          <option value="FD-EQ-C4">FD-EQ-C4</option>
+          <option value="FD-EQ-C5">FD-EQ-C5</option>
+          <option value="FD-EQ-C6">FD-EQ-C6</option>
+          <option value="FD-EQ-C7">FD-EQ-C7</option>
+          <option value="FD-EQ-C8">FD-EQ-C8</option>
+          <option value="FD-EQ-C9">FD-EQ-C9</option>
+          <option value="FD-EQ-C10">FD-EQ-C10</option></select
+        ><br /><br />
+
+        <label
+          for="Equipment"
+          style="height: 25px; width: 90px; margin-left: 19px"
+          >EQUIPMENT:</label
+        >
+        <select
+          name="data[Equipment]"
+          id="adpt_1"
+          style="height: 30px; width: 199px"
+        >
+          <option value="N5234B -MY58421509">N5234B -MY58421509</option>
+          <option value="N5234A -MY55441425">N5234A -MY55441425</option>
+          <option value="P9375A -MY57211353">P9375A -MY57211353</option>
+          <option value="ZVA67 -101150">ZVA67 -101150</option>
+          <option value="P9375A -MY57211354">P9375A -MY57211354</option>
+          <option value="N5234B -MY58421509">N5234B -MY58421509</option>
+        </select>
+
+        <label
+          for="fixture"
+          style="height: 25px; width: 90px; margin-left: 45px"
+          >FIXTURE:</label
+        >
+        <select
+          name="data[Fixture]"
+          id="fixture"
+          style="height: 30px; width: 180px"
+        >
+          <option value="T6620-11W-G">T6620-11W-G</option>
+          <option value="T6620-13-G">T6620-13-G</option>
+          <option value="T6620-15-G">T6620-15-G</option>
+
+          <option value="T6620-18-G">T6620-18-G</option>
+          <option value="T6620-23-G">T6620-23-G</option>
+          <option value="T6620-28-G">T6620-28-G</option>
+          <option value="T6620-32-G">T6620-32-G</option>
+          <option value="T6620-38-G">T6620-38-G</option>
+          <option value="T6620-42-G">T6620-42-G</option>
+          <option value="T6620-6W-G">T6620-6W-G</option>
+          <option value="T6620-7W-G">T6620-7W-G</option>
+          <option value="T6901-23">T6901-23</option>
+          <option value="T6901-11W">T6901-11W</option>
+          <option value="T6901-7W">T6901-7W</option>
+          <option value="T6901-13">T6901-13</option>
+          <option value="T6901-15">T6901-15</option>
+        </select>
+
+        <label
+          for="frequency"
+          style="height: 25px; width: 90px; margin-left: 070px"
+          >FREQUENCY:</label
+        >
+        <select
+          name="data[Frequency]"
+          id="frequency"
+          style="height: 30px; width: 100px"
+        >
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="11">11</option>
+          <option value="13">13</option>
+          <option value="15">15</option>
+          <option value="18">18</option>
+          <option value="23">23</option>
+          <option value="26">26</option>
+          <option value="28">28</option>
+          <option value="32">32</option>
+          <option value="38">38</option>
+          <option value="42">42</option>
+          <option value="80">80</option>
+        </select>
+
+        <!---radio button 1--->
+
+        <input
+          type="radio"
+          value="yes"
+          name="data[IPI]"
+          style="padding: 90px; margin-left: 135px"
+        /><mark>IPI</mark>
+
+        <!---radio button 2--->
+
+        <input
+          type="radio"
+          value="yes"
+          name="data[Return loss]"
+          style="margin-left: 26px"
+        />
+        <mark style="background-color: orange">RETURN LOSS</mark> <br /><br />
+
+        <label
+          for="count"
+          style="
+            height: 25px;
+            width: 90px;
+            position: absolute;
+            margin-top: -14px;
+          "
+          >CALIBRATION COUNT:</label
+        >
+        <select
+          name="data[Calibration count]"
+          id="count"
+          style="height: 30px; width: 100px; margin-left: 138px"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+        </select>
+
+        <label
+          for="time"
+          style="
+            height: 25px;
+            width: 90px;
+            position: absolute;
+            margin-left: 147px;
+            margin-top: -13px;
+          "
+          >TIME TAKEN:</label
+        >
+        <select
+          name="data[Time taken]"
+          id="time"
+          style="height: 30px; width: 100px; margin-left: 224px"
+        >
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+          <option value="60">60</option>
+        </select>
+
+        <label for="area" style="height: 25px; width: 90px; margin-left: 198px"
+          >AREA:</label
+        >
+        <select
+          name="data[Area]"
+          id="area"
+          style="height: 30px; width: 100px"
+          onchange="check_area(value)"
+        >
+          <option value="" disabled selected></option>
+          <option value="Feed" onchange="check_area(value)">Feed</option>
+          <option value="Dual band" onchange="check_area(value)">
+            Dual band
+          </option>
+          <option value="80ghz" onchange="check_area(value)">80ghz</option>
+          <option value="Titan" onchange="check_area(value)">Titan</option>
+        </select>
+
+        <label for="s11" style="margin-left: 79px">S11: </label>
+        <input
+          type="number"
+          id="s11"
+          min="-40"
+          name="data[s11]"
+          style="height: 20px; width: 50px"
+          required
+        />
+        <label for="s22">S22: </label>
+        <input
+          type="number"
+          id="s22"
+          min="-40"
+          name="data[s22]"
+          style="height: 20px; width: 50px"
+          required
+        />
+        <label for="s21">S21: </label>
+        <input
+          type="number"
+          id="s21"
+          min="-40"
+          name="data[s21]"
+          style="height: 20px; width: 50px"
+          required
+        />
+
+        <br /><br />
+
+        <br /><br />
+
+        <button
+          type="submit"
+          class="submit-btn"
+          style="padding-right: 50px; margin-left: 35%; width: 5cm"
+          onclick="check()"
+        >
+          Submit:
+        </button>
+
+        <input
+          type="Reset"
+          value="Reset"
+          class="submit-btn"
+          style="
+            background-color: lightskyblue;
+            margin-left: 5%;
+            width: 5cm;
+            border-color: rgb(213, 17, 17) 10px;
+            border-style: solid;
+          "
+          required
+        /><br /><br />
+      </form>
+    </fieldset>
+    <br /><br />
+    <span id="succ"> </span>
+    <br /><br />
+    <div id="message" class="hidden">TEST RESULT</div>
+    <br /><br /><br /><br />
+    <img src="feed.jpg" id="feed" style="margin-right: 21px" />
+    <img src="80ghz.jpg" id="80ghz" style="margin-left: 75px" />
+    <img src="dual.jpg" id="dual" style="margin-left: 76px" />
+    <img src="titan.jpg" id="titan" style="margin-left: 48px" />
+
+    <script>
+      const scriptURL = "https://sheetdb.io/api/v1/x4le8bq47k7ig";
+      const form = document.forms["submit-to-google-sheet"];
+      const sucess = document.getElementById("succ");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            sucess.innerHTML = "Last calibration done on   " + "   " + Date();
+          })
+          .catch((error) => {
+            sucess.innerHTML = "ERROR WHILE SUBMITTING";
+            setTimeout(function () {
+              sucess.innerHTML = "";
+            }, 2000);
+          });
+      });
+      function check_area(value) {
+        var area1 = document.getElementById("feed");
+        var area2 = document.getElementById("dual");
+        var area3 = document.getElementById("80ghz");
+        var area4 = document.getElementById("titan");
+        if (value == "Feed") {
+          area1.setAttribute("style", "border-color:red;margin-right: 21px");
+          area2.setAttribute("style", "border-color:black;margin-left: 76px");
+          area3.setAttribute("style", "border-color:black;margin-left: 75px");
+          area4.setAttribute("style", "border-color:black;margin-left: 48px");
+        }
+        if (value == "Dual band") {
+          area2.setAttribute("style", "border-color:red;margin-left: 76px");
+          area1.setAttribute("style", "border-color:black;margin-right: 21px");
+          area4.setAttribute("style", "border-color:black;margin-left: 48px");
+          area3.setAttribute("style", "border-color:black;margin-left: 75px");
+        }
+        if (value == "80ghz") {
+          area3.setAttribute("style", "border-color:red;margin-left: 75px");
+          area1.setAttribute("style", "border-color:black;margin-right: 21px");
+          area2.setAttribute("style", "border-color:black;margin-left: 76px");
+          area4.setAttribute("style", "border-color:black;margin-left: 48px");
+        }
+        if (value == "Titan") {
+          area4.setAttribute("style", "border-color:red;margin-left: 48px");
+          area3.setAttribute("style", "border-color:black;margin-left: 75px");
+          area1.setAttribute("style", "border-color:black;margin-right: 21px");
+          area2.setAttribute("style", "border-color:black;margin-left: 76px");
+        }
+      }
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
