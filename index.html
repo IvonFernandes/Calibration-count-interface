@@ -380,6 +380,7 @@
           id="ord"
           name="data[Order No]"
           min="100000000"
+          max="9999999999999"
           style="
             height: 25px;
             width: 171px;
@@ -388,6 +389,8 @@
             position: relative;
           "
           required=""
+          maxlength="13"
+          minlength="10"
         />
 
         <label for="ord" style="margin-left: 74px">ORDER QTY: </label>
@@ -1024,6 +1027,7 @@
           id="s11"
           name="data[s11]"
           style="height: 20px; width: 50px"
+          max="-40"
           required
         />
         <label for="s22">S22: </label>
@@ -1032,6 +1036,7 @@
           id="s22"
           name="data[s22]"
           style="height: 20px; width: 50px"
+          max="-40"
           required
         />
         <label for="s21">S21: </label>
